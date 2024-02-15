@@ -1,0 +1,36 @@
+<div class="flex flex-row align-middle justify-between text-white bg-black px-5">
+        <a routerLink="/dashboard" routerLinkActive="active">
+            <h1 class=" text-5xl my-6">{{title}}</h1>
+        </a>
+    <div class="my-auto">
+        <nav class="text-2xl flex flex-row gap-5 ">
+            <a routerLink="/dashboard" routerLinkActive="active" class="px-2 rounded-lg hover:bg-white hover:text-black ease-in-out duration-300">Home</a>
+            <a routerLink="/products" #productRoute="routerLinkActive" routerLinkActive="active" class="px-2 rounded-lg hover:bg-white hover:text-black ease-in-out duration-300">Products</a>
+            <a routerLink="/lessons" routerLinkActive="active" class="px-2 text- rounded-lg hover:bg-white hover:text-black ease-in-out duration-300">Lessons</a>
+            <a routerLink="/login" routerLinkActive="active" class="px-2 rounded-lg hover:bg-white hover:text-black ease-in-out duration-300">Log In</a>
+            <a *ngIf="!isAdmin"routerLink="/cart" routerLinkActive="active" class="px-2 text- rounded-lg hover:bg-white hover:text-black ease-in-out duration-300">Cart</a>
+        </nav>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<div class="flex flex-row align-middle justify-between text-white bg-black px-5">
+    <a class="my-auto"routerLink="/dashboard" routerLinkActive="active">
+        <h1 class=" text-5xl my-6">{{title}}</h1>
+    </a>
+    <div class="my-auto ml-auto flex flex-row text-xl gap-20 py-10">
+        <h1 class="my-auto">
+            Get in touch with us!
+        </h1>
+        <div class="flex flex-col gap-5">
+            <h1>
+                Email: inTuneSupport@gmail.com
+            </h1>
+            <h1>
+                Phone: 1-800-123-4567
+            </h1>
+            <h1>
+                Address: 1234 Main St. Anytown, USA
+            </h1>
+        </div>
+    </div>
+</div>
